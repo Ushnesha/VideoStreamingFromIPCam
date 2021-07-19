@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="showViewModel"
+            type="com.example.livevideofromurl.ShowVideoViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.longdo.mjpegviewer.MjpegView
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:contentDescription="@string/refresh"
+            android:focusable="true"
+            android:onClick="@{() -> showViewModel.onRefresh(view1)}"
+           app:fabCustomSize="30dp"
+            android:backgroundTint="@color/white"
+            app:srcCompat="@android:drawable/ic_popup_sync" />
+
+
+    </RelativeLayout>
+
+</layout>
