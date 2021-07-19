@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">LiveVideoFromUrl</string>
+    <string name="app_name">Video Streaming From IPCam</string>
     <string name="refresh">Refresh</string>
 </resources>
